@@ -4,8 +4,6 @@ import './App.css';
 
 // 카카오 로그인 페이지 컴포넌트
 function LoginPage() {
-  const navigate = useNavigate();
-  
   const handleKakaoLogin = () => {
     // 저장된 토큰이 있다면 로그아웃 처리
     const savedTokenData = localStorage.getItem('kakaoTokenData');
