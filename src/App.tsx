@@ -277,7 +277,7 @@ function AuthCallback() {
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/auth" element={<AuthCallback />} />
