@@ -214,7 +214,7 @@ function AuthCallback() {
               }, null, 2)}
             </pre>
           ) : (
-            <div>토큰을 요청하는 중...</div>
+            <div>토큰을 요청하는 중....</div>
           )}
         </div>
 
