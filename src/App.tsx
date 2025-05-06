@@ -21,7 +21,7 @@ function LoginPage() {
     <div className="App">
       <div className="login-container">
         <img 
-          src="/images/kakao/ko/kakao_login_medium_narrow.png" 
+          src="./images/kakao/ko/kakao_login_medium_narrow.png" 
           alt="카카오 로그인" 
           className="kakao-login-button"
           onClick={handleKakaoLogin}
