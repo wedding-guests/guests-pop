@@ -14,7 +14,7 @@ function LoginPage() {
     }
     
     // 카카오 로그인 URL로 리다이렉트 (scope 수정)
-    window.location.href = 'https://kauth.kakao.com/oauth/authorize?client_id=0ca2ec520be5acd27b588df7f93ddb07&redirect_uri=https://wedding-guests.github.io/guests-pop/#/auth&response_type=code&scope=talk_message,account_email';
+    window.location.href = 'https://kauth.kakao.com/oauth/authorize?client_id=0ca2ec520be5acd27b588df7f93ddb07&redirect_uri=https://wedding-guests.github.io/guests-pop/%23/auth&response_type=code&scope=talk_message,account_email';
   };
 
   return (
@@ -74,7 +74,7 @@ function AuthCallback() {
           body: new URLSearchParams({
             grant_type: 'authorization_code',
             client_id: '0ca2ec520be5acd27b588df7f93ddb07',
-            redirect_uri: 'https://wedding-guests.github.io/guests-pop/#/auth',
+            redirect_uri: 'https://wedding-guests.github.io/guests-pop/%23/auth',
             code: code,
           }),
         });
@@ -162,7 +162,7 @@ function AuthCallback() {
 
     const requestAdditionalConsent = (accessToken: string) => {
       // 추가 동의 페이지로 리다이렉트
-      window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=0ca2ec520be5acd27b588df7f93ddb07&redirect_uri=https://wedding-guests.github.io/guests-pop/#/auth&response_type=code&scope=talk_message&prompt=consent`;
+      window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=0ca2ec520be5acd27b588df7f93ddb07&redirect_uri=https://wedding-guests.github.io/guests-pop/%23/auth&response_type=code&scope=talk_message&prompt=consent`;
     };
 
     getToken();
@@ -192,7 +192,7 @@ function AuthCallback() {
             {JSON.stringify({
               grant_type: 'authorization_code',
               client_id: '0ca2ec520be5acd27b588df7f93ddb07',
-              redirect_uri: 'https://wedding-guests.github.io/guests-pop/#/auth',
+              redirect_uri: 'https://wedding-guests.github.io/guests-pop/%23/auth',
               code: code,
             }, null, 2)}
           </pre>
