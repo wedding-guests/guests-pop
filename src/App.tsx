@@ -279,8 +279,8 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/auth" element={<AuthCallback />} />
+        <Route path="" element={<LoginPage />} />
+        <Route path="auth" element={<AuthCallback />} />
       </Routes>
     </Router>
   );
