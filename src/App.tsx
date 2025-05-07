@@ -280,7 +280,7 @@ const router = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
   { path: "/auth", element: <AuthCallback /> },
 ], {
-    basename: process.env.PUBLIC_URL
+    basename: "https://wedding-guests.github.io/guests-pop"
 });
 
 console.log(process.env.PUBLIC_URL);
