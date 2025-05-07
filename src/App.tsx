@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route, useNavigate, useLocation, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import { log } from 'console';
 
 // 카카오 로그인 페이지 컴포넌트
 function LoginPage() {
@@ -277,10 +278,12 @@ function AuthCallback() {
 
 const router = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
-  { path: "/auth", element: <AuthCallback /> },
+  { path: `${process.env.PUBLIC_URL}/auth`, element: <AuthCallback /> },
 ], {
-    basename: "/guests-pop"
+    basename: process.env.PUBLIC_URL
 });
+
+console.log(process.env.PUBLIC_URL);
 
 function App() {
   return (
