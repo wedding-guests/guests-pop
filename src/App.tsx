@@ -13,7 +13,7 @@ function LoginPage() {
     }
     
     // 카카오 로그인 URL로 리다이렉트 (scope 수정)
-    window.location.href = 'https://kauth.kakao.com/oauth/authorize?client_id=0ca2ec520be5acd27b588df7f93ddb07&redirect_uri=https://wedding-guests.github.io/guests-pop/auth&response_type=code&scope=talk_message,account_email';
+    window.location.href = 'https://kauth.kakao.com/oauth/authorize?client_id=0ca2ec520be5acd27b588df7f93ddb07&redirect_uri=https://wedding-guests.github.io/guests-pop/auth&response_type=code&scope=talk_message,account_email,friends';
   };
 
   return (
