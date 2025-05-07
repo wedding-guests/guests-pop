@@ -278,7 +278,7 @@ function AuthCallback() {
 
 const router = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
-  { path: `${process.env.PUBLIC_URL}/auth`, element: <AuthCallback /> },
+  { path: "/auth", element: <AuthCallback /> },
 ], {
     basename: process.env.PUBLIC_URL
 });
