@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useNavigate, useLocation, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 
 // 카카오 로그인 페이지 컴포넌트
@@ -275,14 +275,16 @@ function AuthCallback() {
   );
 }
 
+const router = createBrowserRouter([
+  { path: "/", element: <LoginPage /> },
+  { path: "/auth", element: <AuthCallback /> },
+], {
+    basename: process.env.PUBLIC_URL
+});
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/auth" element={<AuthCallback />} />
-      </Routes>
-    </Router>
+    <RouterProvider router={router} />
   );
 }
 
