@@ -279,7 +279,7 @@ const router = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
   { path: "/auth", element: <AuthCallback /> },
 ], {
-    basename: process.env.PUBLIC_URL
+    basename: "/guests-pop"
 });
 
 function App() {
