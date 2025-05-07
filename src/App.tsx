@@ -144,6 +144,7 @@ function AuthCallback() {
         });
 
         const data = await response.json();
+        console.log(data);
         if (data.error) {
           if (data.error === 'insufficient_scope') {
             // 추가 동의가 필요한 경우
