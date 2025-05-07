@@ -277,10 +277,9 @@ function AuthCallback() {
 }
 
 const router = createBrowserRouter([
-  { path: "/", element: <LoginPage /> },
-  { path: "/auth", element: <AuthCallback /> },
+  { path: "/guests-pop", element: <LoginPage /> },
+  { path: "/guests-pop/auth", element: <AuthCallback /> },
 ], {
-    basename: "/guests-pop"
 });
 
 console.log(process.env.PUBLIC_URL);
